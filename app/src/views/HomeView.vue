@@ -1,5 +1,5 @@
 <script setup>
-import test from '../components/Test.vue'
+import test from '../components/ScatterChart.vue'
 </script>
 
 <template>

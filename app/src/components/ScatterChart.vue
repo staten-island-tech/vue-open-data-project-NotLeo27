@@ -19,10 +19,10 @@ async function fetchNYCData() {
     console.log(data)
 
     data.forEach((object) => {
-      let MedianSalary = data.salary_range_from + data.salary_range_to
-      Salaries.push(MedianSalary)
+      let AverageSalary =
+        (parseInt(object.salary_range_from) + parseInt(object.salary_range_to)) / 2
+      Salaries.push(AverageSalary)
     })
-
     console.log(Salaries)
   } catch (error) {
     console.error('Error fetching data:', error)
