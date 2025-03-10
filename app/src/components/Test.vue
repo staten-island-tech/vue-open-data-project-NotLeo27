@@ -5,6 +5,8 @@
 <script setup>
 import { onMounted } from 'vue'
 
+let Salaries = []
+
 async function fetchNYCData() {
   const url = 'https://data.cityofnewyork.us/resource/kpav-sd4t.json'
 
@@ -16,7 +18,12 @@ async function fetchNYCData() {
     const data = await response.json()
     console.log(data)
 
-    async
+    data.forEach((object) => {
+      let MedianSalary = data.salary_range_from + data.salary_range_to
+      Salaries.push(MedianSalary)
+    })
+
+    console.log(Salaries)
   } catch (error) {
     console.error('Error fetching data:', error)
   }
