@@ -15,6 +15,8 @@ async function fetchNYCData() {
     }
     const data = await response.json()
     console.log(data)
+
+    async
   } catch (error) {
     console.error('Error fetching data:', error)
   }
