@@ -4,8 +4,9 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import { Chart, registerables } from 'vue'
 
-let Salaries = []
+let BySalaries = []
 
 async function fetchNYCData() {
   const url = 'https://data.cityofnewyork.us/resource/kpav-sd4t.json'
@@ -19,11 +20,23 @@ async function fetchNYCData() {
     console.log(data)
 
     data.forEach((object) => {
+      let newObject = {
+        business_title: null,
+        AverageSalary: null,
+      }
+
+      if (object.business_title) {
+        newObject.business_title = object.business_title
+      }
+
       let AverageSalary =
         (parseInt(object.salary_range_from) + parseInt(object.salary_range_to)) / 2
-      Salaries.push(AverageSalary)
+
+      newObject.AverageSalary = AverageSalary
+
+      BySalaries.push(newObject)
     })
-    console.log(Salaries)
+    console.log(BySalaries)
   } catch (error) {
     console.error('Error fetching data:', error)
   }
