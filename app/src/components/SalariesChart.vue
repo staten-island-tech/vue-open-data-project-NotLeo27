@@ -4,7 +4,7 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import { Chart, registerables } from 'vue'
+import { Chart } from 'chart.js/auto'
 
 let BySalaries = []
 
