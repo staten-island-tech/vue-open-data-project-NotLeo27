@@ -29,6 +29,10 @@ async function fetchNYCData() {
         newObject.business_title = object.business_title
       }
 
+      if (object.number_of_positions) {
+        newObject.number_of_positions = object.number_of_positions
+      }
+
       let AverageSalary =
         (parseInt(object.salary_range_from) + parseInt(object.salary_range_to)) / 2
 
@@ -42,9 +46,9 @@ async function fetchNYCData() {
   }
 }
 
-onMounted(() => {
-  fetchNYCData()
-})
+onMounted(() => fetchNYCData())
 </script>
 
 <style scoped></style>
+
+// use offset its useful

@@ -1,9 +1,11 @@
 <script setup>
-import test from '../components/SalariesChart.vue'
+import SalariesChart from '../components/SalariesChart.vue'
+import Test from '../components/test.vue'
 </script>
 
 <template>
   <main>
-    <test />
+    <SalariesChart />
+    <Test />
   </main>
 </template>

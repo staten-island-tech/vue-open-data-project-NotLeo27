@@ -1,7 +1,7 @@
 <template>
   <div id="tabButtons">
-    <div></div>
-    <div></div>
+    <div>Avaliable Positions</div>
+    <div>Salary</div>
   </div>
 </template>
 
