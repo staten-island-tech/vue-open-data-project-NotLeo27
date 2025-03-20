@@ -1,7 +1,6 @@
 <template>
   <div id="tabButtons">
-    <div>Avaliable Positions</div>
-    <div>Salary</div>
+    <RouterView></RouterView>
   </div>
 </template>
 
