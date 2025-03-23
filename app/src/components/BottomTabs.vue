@@ -5,10 +5,6 @@ import { RouterView, RouterLink } from 'vue-router';
 <template>
   <div class="container">
 
-    <div class="content">
-      <RouterView />
-    </div>
-
     <div class="bottom-nav">
       <RouterLink to="/available-position" active-class="active">Available Positions</RouterLink>
       <RouterLink to="/salary-range" active-class="active">Salary Range</RouterLink>
