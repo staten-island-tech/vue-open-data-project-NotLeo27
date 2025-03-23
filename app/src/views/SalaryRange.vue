@@ -1,11 +1,15 @@
-<script setup>
-import Test from '../components/test.vue'
-import PositionsChart from '../components/PositionsChart.vue';
+<template>
+  <div>
 
+  </div>
+</template>
+
+<script>
+  export default {
+    
+  }
 </script>
 
-<template>
-  <main>
-    <PositionsChart />
-  </main>
-</template>
+<style lang="scss" scoped>
+
+</style>

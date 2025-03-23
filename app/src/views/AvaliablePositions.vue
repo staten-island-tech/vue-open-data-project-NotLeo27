@@ -1,13 +1,11 @@
-<template>
-    <div>
-
-    </div>
-</template>
-
 <script setup>
+import Test from '../components/test.vue'
+import PositionsChart from '../components/PositionsChart.vue';
 
 </script>
 
-<style scoped>
-
-</style>
+<template>
+  <main>
+    <PositionsChart />
+  </main>
+</template>

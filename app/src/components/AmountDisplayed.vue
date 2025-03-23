@@ -1,11 +1,45 @@
 <template>
-  <div>
-    <div>5</div>
-    <div>10</div>
-    <div>20</div>
+  <div class="button-container">
+    <button class="nav-button" @click="updateOffset(-20)">Last 20</button>
+    <button class="nav-button" @click="updateOffset(20)">Next 20</button>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, defineEmits } from 'vue';
 
-<style scoped></style>
+const emit = defineEmits(['offset-updated']);
+const offset = ref(0);
+
+const updateOffset = (value) => {
+  offset.value += value;
+  emit('offset-updated', offset.value);
+};
+</script>
+
+<style scoped>
+.button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button {
+  padding: 10px 20px;
+  border: 2px solid #6c9cd2;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+}
+</style>
