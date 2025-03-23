@@ -10,9 +10,8 @@ import { RouterView, RouterLink } from 'vue-router';
     </div>
 
     <div class="bottom-nav">
-      <RouterLink to="/" active-class="active">Home</RouterLink>
-      <RouterLink to="/about" active-class="active">About</RouterLink>
-      <RouterLink to="/contact" active-class="active">Contact</RouterLink>
+      <RouterLink to="/available-position" active-class="active">Available Positions</RouterLink>
+      <RouterLink to="/salary-range" active-class="active">Salary Range</RouterLink>
     </div>
   </div>
 </template>
