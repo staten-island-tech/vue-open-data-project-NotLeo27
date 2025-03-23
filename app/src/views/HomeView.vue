@@ -8,6 +8,6 @@ import BottomTabs from '../components/BottomTabs.vue'
   <main>
     <SalariesChart />
     <Test />
-    <BottomTabs />
+
   </main>
 </template>
