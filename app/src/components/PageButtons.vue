@@ -6,21 +6,21 @@
 </template>
 
 <script setup>
-import { ref, defineEmits } from 'vue';
+import { ref, defineEmits } from 'vue'
 
-const emit = defineEmits(['offset-updated']);
-const offset = ref(0);
+const emit = defineEmits(['offset-updated'])
+const offset = ref(0)
 
 const updateOffset = (value) => {
-  offset.value = Math.max(0, offset.value + value);
-  emit('offset-updated', offset.value);
-};
+  offset.value = Math.max(0, offset.value + value)
+  emit('offset-updated', offset.value)
+}
 </script>
 
 <style scoped>
 .button-container {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px; /* Moved up from 20px */
   right: 20px;
   display: flex;
   gap: 10px;
