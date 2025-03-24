@@ -1,7 +1,7 @@
 <template>
   <div class="button-container">
-    <button class="nav-button" @click="updateOffset(-20)">Last 20</button>
-    <button class="nav-button" @click="updateOffset(20)">Next 20</button>
+    <button class="nav-button" @click="updateOffset(-5)" :disabled="offset === 0">Last 5</button>
+    <button class="nav-button" @click="updateOffset(5)">Next 5</button>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ const emit = defineEmits(['offset-updated']);
 const offset = ref(0);
 
 const updateOffset = (value) => {
-  offset.value += value;
+  offset.value = Math.max(0, offset.value + value);
   emit('offset-updated', offset.value);
 };
 </script>
@@ -41,5 +41,10 @@ const updateOffset = (value) => {
 
 .nav-button:hover {
   background-color: #f0f0f0;
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 </style>
