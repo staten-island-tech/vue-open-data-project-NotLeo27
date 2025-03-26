@@ -45,7 +45,6 @@ async function fetchNYCData() {
       const labels = result.map((entry) => entry['Job Agency']);
       const dataValues = result.map((entry) => entry['Positions']);
 
-      // If chart already exists, destroy it before creating a new one
       if (chartInstance) {
           chartInstance.destroy();
       }
